@@ -1,0 +1,16 @@
+name: Delete All Files
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  delete_files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete all files
+        run: |
+          git rm -r *
+          git commit -m "delete all"
+          git push
