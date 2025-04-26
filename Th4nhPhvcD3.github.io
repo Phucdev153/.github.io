@@ -1,111 +1,63 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <link rel="shortcut icon" href="https://i.imgur.com/R4YNDY5.jpg" type="image/x-icon">
-    <title>THANHDIEU | HOME</title>
-     <link rel="stylesheet" href="_thanhdieu.css" />
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-     <link rel="stylesheet" href="index.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-    <meta name="author" content="Đây Là Website Của ThanhDieu-Dev, Rất Mong Được Chào Đón Bạn !">
-    <meta property="og:title" content="HELLO TA CHI HẢO - THIS IS THANHDIEUTV !">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="http://thanhdieu.com/">
-    <meta property="og:image" content="http://thanhdieu.com/files/thanhdieugirl.jpg">
-    <meta property="og:image:width" content="120">
-    <meta property="og:image:height" content="120">
-    <meta property="og:site_name" content="ThanhDieuTV">
-    <meta name="theme-color" content="#00FFFF" />
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js' type='text/javascript'></script>
+    <meta charset="UTF-8">
+    <title>Chat với AI</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f0f2f5; padding: 20px; }
+        #chatbox { background: white; padding: 15px; border-radius: 10px; max-width: 600px; margin: auto; height: 500px; overflow-y: auto; }
+        .user, .ai { margin: 10px 0; }
+        .user { text-align: right; color: blue; }
+        .ai { text-align: left; color: green; }
+        #form { display: flex; justify-content: center; margin-top: 20px; }
+        input[type="text"] { width: 70%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
+        button { padding: 10px 20px; border: none; background: #4CAF50; color: white; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #45a049; }
+    </style>
 </head>
-</div>
-<body class="Border" onLoad="onCreate()">
-    <div class="BlurWebs">
-    <div class="Topnav">
-    <a class="Active">HOME</a>
-    <a style="color:red;">
-    <span id="fps">60.0</span> FPS</a></div>
-    <br>
-   <!-- ===== ❀ NƠI EDIT AVATAR ❀ ===== -->
-    <p align="center">
-    <img  class="Blob" src="https://img.win3000.com/m00/48/02/085e1a8c2dec126cfd3ec0b17994bbec.jpg" width="96" height="96" alpha="@ThanhDieu@"></p>
-    <h2 class="NameFtThanhDieu" align="center">
-    VUONG THANH DIEU <i class="fa fa-check-circle"></i></h2> 
-    <h2 class="TieuSu">
-    Hey brother, I'm a Developer.<br>I like website design :)</h2>
-    <br><hr class="New"><br>
-    <!-- Thông Tin Liên Hệ -->
-    <h2 class="NameFtThanhDieu">
-    Contact Social
-    </h2>
-    <ul class="icons">
-    <br>
-    <div class="MangXaHoiFtThanhDieu">
-    <a id="Youtube" onClick="Youtube()">
-    <div class="Youtube">YouTube</div></a>
-    <br>
-    <a id="Facebook" onClick="Facebook()">
-    <div class="Facebook">Facebook</div>
-    </a>
-    <br>
-    <a id="Discord" onClick="Discord()">
-    <div class="Discord">Discord</div></a>
-    <br>
-    <a id="Telegram" onClick="Telegram()">
-    <div class="Telegram">Telegram</div></a>
-    <br>
-   </div>
-    <br><hr class="New"><br>
-     <!-- ===== Thông Tin Thanh Toán - Có Thể Thêm Đoạn Văn Bản Giới Thiệu Ngắn Về Bản Thân  <button> <i class="fa fa-clone"></button> ===== -->
-    <div class="NameFtThanhDieu">
-  <h2>Mobile Banks</h2>
-    </div>
-    <div class="ThongTinThanhToan">
-    <p class="ThongTinThanhToanTitle">VietinBank</p>
-    <p class="ThongTinThanhToanText">STK: 107873856811 || CTK DO HOAI KHUONG</p>
-    </div>
-    <br>
-    <div class="ThongTinThanhToan">
-    <p class="ThongTinThanhToanTitle">Momo Bank</p>
-    <p class="ThongTinThanhToanText">STK 0968091844 || CTK DO HOAI KHUONG</p>
-    </div>
-    <br>
-    <div class="ThongTinThanhToan">
-    <p class="ThongTinThanhToanTitle">Paypal</p>
-    <p class="ThongTinThanhToanText" >STK: @ThanhDieuUser || MAIL: VUONGTHANHDIEU2K2@GMAIL.COM</p>
-    </div>
-    <br>
-    <br>
-    <hr class="ThanhGachNgang">
-    <br>
-    <br>
-     <div class="NameFtThanhDieu">
-    <h2><i class="fas fa-code"></i> Skill Languages </h2>
-    <br>
-    </div>
-    <ul class="thanhdieuftskill outline">
-          <li class="thanhdieutransform">Javascript</li>
-          <li class="thanhdieutransform">Typescript</li>
-          <br>
-          <li class="thanhdieutransform">Lua</li>
-          <li class="thanhdieutransform" >Html/Css</li>
-          <br>
-        </ul>
-        <br>
-    <!-- ===== Thanh Gạch Ngang ===== -->
-        <hr class="ThanhGachNgang">
-    <footer class="Cuoi Trang">
-      <p class="ThanhDieuFtCopyright">
-        <!-- ===== Thông điệp cuối cùng cho người xem ===== -->
-<p class="rainbow" class="copyright">Created by <a style="text-decoration: none;" class="copyright" href="https://www.facebook.com/100035052735014"><font class="rainbow" color="white"> ThanhDieuTV</font></a>
-<br> <strong>All rights reserved - © 2022 </strong></p>
-    </footer>
-    </div>
-    <div id="Toast">Welcome to the website ThanhDieu :)</div>
-    <script type="text/javascript" src="./thanhdieuft-javascript/index.js"></script>
- <script type="text/javascript">var fps = document.getElementById("fps");var startTime = Date.now();var frame = 0;function tick(){var time = Date.now();frame++;if(time - startTime > 1000){fps.innerHTML = (frame / ((time - startTime) / 1000)).toFixed(1);startTime = time;frame = 0;}window.requestAnimationFrame(tick);}tick();</script>
+<body>
+
+<div id="chatbox"></div>
+
+<form id="form" onsubmit="return sendMessage()">
+    <input type="text" id="userInput" placeholder="Nhập tin nhắn..." autocomplete="off" required>
+    <button type="submit">Gửi</button>
+</form>
+
+<script>
+    const apiKey = "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";
+
+    async function sendMessage() {
+        const inputField = document.getElementById('userInput');
+        const message = inputField.value.trim();
+        if (!message) return false;
+
+        const chatbox = document.getElementById('chatbox');
+        chatbox.innerHTML += `<div class="user"><strong>Bạn:</strong> ${message}</div>`;
+        inputField.value = '';
+        chatbox.scrollTop = chatbox.scrollHeight;
+
+        const response = await fetch('https://api.openai.com/v1/chat/completions', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${apiKey}`
+            },
+            body: JSON.stringify({
+                model: "gpt-3.5-turbo",
+                messages: [{role: "user", content: message}]
+            })
+        });
+
+        const data = await response.json();
+        const aiMessage = data.choices[0].message.content;
+
+        chatbox.innerHTML += `<div class="ai"><strong>AI:</strong> ${aiMessage}</div>`;
+        chatbox.scrollTop = chatbox.scrollHeight;
+
+        return false;
+    }
+</script>
+
 </body>
 </html>
